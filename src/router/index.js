@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import login from '../views/login'
+import register from '../views/register.vue'
+
 
 Vue.use(VueRouter)
 
@@ -9,6 +12,16 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: register
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: login
   },
   {
     path: '/about',
