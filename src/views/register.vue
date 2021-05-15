@@ -142,6 +142,15 @@ export default {
        console.log('Done')
      }
 
+    },
+    
+    mounted(){
+            
+           //Protect Route
+           if(this.$cookie.get('Cust')){
+                this.$router.push('Home')
+            }
+
     }
 
 }

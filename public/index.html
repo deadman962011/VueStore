@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="http://127.0.0.1/cdn/bootstrap/css/bootstrap.min.css">
 
+    <style>
+      .display{
+        display: block !important;
+      }
+    </style>
+
   </head>
   <body>
     <noscript>
@@ -16,8 +22,19 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-
+    <script src="http://127.0.0.1/cdn/jquery/jquery.min.js"></script>
     <script src='http://127.0.0.1/cdn/bootstrap/js/bootstrap.min.js'></script>
+  
+
+    <script >
+      //display cart on click
+      $(document).on('click','.CartBtn',function(){
+
+      console.log('click trigred')
+      $('.CartList').toggleClass('display')
+
+      })
+    </script>
 
   </body>
 </html>

@@ -23,11 +23,37 @@
 <script>
 
 import Navbar from '@/components/layouts/Navbar.vue';
+
+import {mapActions} from 'vuex';
+
 export default {
 
   components: {
     Navbar
+  },
+  methods:{
+
+  ...mapActions(['ProductAll','CategoryAll'])
+
+  },
+
+
+  mounted(){
+
+   //get Categories
+   this.CategoryAll()
+
+   //get Products 
+   this.ProductAll()
+
+
+   //disable Loader 
+
+   
+
+
   }
+
 }
 
 </script>
